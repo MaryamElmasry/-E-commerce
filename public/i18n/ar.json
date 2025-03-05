@@ -1,0 +1,43 @@
+{
+  "navbar": {
+    "home": "الرئيسية",
+    "products": "المنتجات",
+    "categories": "الفئات",
+    "brands": "العلامات التجارية",
+    "login": "تسجيل الدخول",
+    "register": "التسجيل",
+    "logout": "تسجيل الخروج",
+    "lang": "اللغة",
+    "popularCategories": "الفئات الشعبية",
+    "Popularproducts": "المنتجات الشعبية",
+    "search": "بحث",
+    "wishList":"المفضله"
+  },
+  "footer": {
+    "GetTheFreshCartApp": "احصل على تطبيق FreshCart",
+    "WeWillSendYouaLink,OpenitonYourPhonetodownloadtheapp": "سوف نرسل لك رابطًا، افتحه على هاتفك لتحميل التطبيق",
+    "Paymentpartners": "شركاء الدفع",
+    "email": "البريد الإلكتروني",
+    "Get DeliverieswithFreshCart": "احصل على التوصيل عبر FreshCart",
+    "shareAppLink": "مشاركة رابط التطبيق"
+  },
+  "login": {
+    "loginNow": "تسجيل الدخول الآن",
+    "email": "البريد الإلكتروني",
+    "password": "كلمة المرور",
+    "signin": "تسجيل الدخول",
+    "forgetpassword": "نسيت كلمة المرور",
+    "Passwordisrequired": "كلمة المرور مطلوبة",
+    "ForgetPassword":"نسيت كلمة المرور ",
+    "Passwordmuststartwithanuppercaseletterandbeatleast8characterslong": "يجب أن تبدأ كلمة المرور بحرف كبير وأن تكون مكونة من 8 أحرف على الأقل"
+  
+  },
+  "cart": {
+    "TotalCartPrice": "إجمالي سعر السلة",
+    "Shop Cart": "سلة التسوق",
+    "Checkout": "الدفع",
+    "nodatafound": "لم يتم العثور على بيانات",
+    "Clearcart": "مسح السلة"
+  }
+}
+

@@ -1,0 +1,44 @@
+ @if (wishListDetails.category) { 
+    <section class="main-sec w-[75%] mx-auto">
+        <div class="border-b mb-3 text-white flex justify-between">
+        <h1 class="text-center text-3xl text-green-600">wish List</h1>
+    
+    
+      
+    </div>
+          @for (WishListProduct of wishListDetails.category ; track WishListProduct.id) {
+        
+        
+            <div class="grid md:grid-cols-[10%_minmax(0,1fr)] border-b mb-2">
+        
+        
+                <div class="card-img">
+                  
+                    <img [src]="WishListProduct.imageCover" class="w-full h-[100px] object-contain" [alt]="WishListProduct.category.name">
+                  </div>
+              
+                <div class="card-body flex justify-between items-center">
+            
+                    <!-- info -->
+                    <div>
+                        <h3>{{WishListProduct.category.name}}</h3>
+                        <h5>price {{WishListProduct.price | currency:'GBP' }}</h5>
+                        <br>
+                        <button (click)="removeItemFromWishCart(WishListProduct.id)"> <i class="text-red-600 fa-solid fa-heart"></i> </button>
+                      
+
+                    </div>
+                   
+                </div>
+                
+            </div>
+          
+        } 
+       
+        
+        
+        </section>
+ }
+@else {
+ <h2  class="text-center text-3xl text-green-600"> no data found</h2>
+} 

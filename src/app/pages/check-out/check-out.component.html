@@ -1,0 +1,30 @@
+<section class="main-sec w-[75%] mx-auto">
+    <h1 class="text-center text-3xl text-green-600">checkOut</h1>
+
+    <form [formGroup]="checkOutform" (ngSubmit)="submitForm()">
+<div class="mb-1">
+    <label for="details" class="block mb-2 text-md font-light text-green-800 dark:text-white">Details</label>
+    <textarea  formControlName="details" id="details" class="bg-white border border-gray-300 text-gray-900 text-sm  rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"></textarea>
+
+</div>
+       
+<div class="mb-1">
+    <label for="phone" class="block mb-2 text-md font-light text-green-800 dark:text-white">phone</label>
+    <input  formControlName="phone" type="tel" id="phone" class="bg-white border border-gray-300 text-gray-900 text-sm  rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+
+</div>
+
+       
+<div class="mb-1">
+    <label for="city" class="block mb-2 text-md font-light text-green-800 dark:text-white">city</label>
+    <input  formControlName="city" id="city" type="text" class="bg-white border border-gray-300 text-gray-900 text-sm  rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+
+</div>
+
+<button [disabled]="checkOutform.invalid" class="btn-main" type="submit">Online PayMent</button>
+<button class="btn-main">cash PayMent</button>
+    </form>
+
+
+
+</section>

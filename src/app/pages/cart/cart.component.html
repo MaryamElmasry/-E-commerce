@@ -1,0 +1,49 @@
+@if (cartDetails.totalCartPrice) {
+    <section class="main-sec w-[75%] mx-auto">
+        <div class="border-b mb-3 text-white flex justify-between">
+        <h1 class="text-center text-3xl text-green-600">Shop Cart</h1>
+    
+        <span class=" text-green-600">Total Cart Price: {{cartDetails.totalCartPrice | currency :'GBP'}}</span>
+        <button (click)="clearItems()" class="bg-red-900 border rounded text-xs">Clear cart</button>
+    </div>
+          @for (cartProduct of cartDetails.products; track cartProduct.product.id) {
+        
+        
+            <div class="grid md:grid-cols-[10%_minmax(0,1fr)] border-b mb-2">
+        
+        
+                <div class="card-img">
+                    <img [src]="cartProduct.product.imageCover" class="w-full h-[100px] object-contain" [alt]="cartProduct.product.title">
+            
+                </div>
+                <div class="card-body flex justify-between items-center">
+            
+                    <!-- info -->
+                    <div>
+                        <h3>{{cartProduct.product.title}}</h3>
+                        <h5>price {{cartProduct.price | currency:'GBP' }}</h5>
+                        <br>
+                        <button (click)="removeItem(cartProduct.product.id)"> <i class="text-green-600 far fa-trash-can"></i> Remove</button>
+            
+                    </div>
+                    <!-- btns -->
+                    <div class="flex items-center gap-2">
+                        <button (click)="updateCount(cartProduct.product.id , cartProduct.count +1)" class="text-green-600 text-xl"><i class="fa-regular fa-square-plus"></i></button>
+                        <span>{{cartProduct.count}}</span>
+                        <button  (click)="updateCount(cartProduct.product.id , cartProduct.count -1)" class="text-green-600 text-xl"><i class="fa-regular fa-square-minus"></i></button>
+            
+            
+                    </div>
+                </div>
+                
+            </div>
+          
+        } 
+        <button class="btn-main" [routerLink]="['/checkout' , cartDetails._id]">checkOut</button>
+        
+        
+        </section>
+}
+@else {
+ <h2  class="text-center text-3xl text-green-600">   no data found</h2>
+}

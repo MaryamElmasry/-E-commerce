@@ -1,0 +1,49 @@
+<!-- products -->
+<section>
+    <h2 class="text-4xl py-2 text-center"> Popular products</h2>
+
+    <input [(ngModel)]="search" type="text" placeholder="search" class="bg-white border border-gray-300 text-gray-900 text-sm  rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-1/2 mx-auto p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+    <br>
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
+        @for (prod of products().slice(0,12) | search:search ; track prod.id  ) {
+            <div class="card border border-green-400/50 rounded-md overflow-hidden shadow relative">
+               <div  [routerLink]="['/details', prod._id]">
+
+                <div class="card-img">
+                    <img [src]="prod.imageCover" class="w-full h-[250px] object-contain" [alt]="prod.title">
+                </div>
+
+                <div class="card-body px-2 py-4">
+                    <h4 class="text-green-500 text-xs">{{ prod.category.name | lowercase  }}</h4>
+                    <h3 class="font-medium">{{ prod.title.split(' ',2).join(' ') | uppercase  }}</h3>
+                    <div class="flex justify-between items-center">
+                        <span>{{  prod.price  | currency: "EGP" }} </span>
+                        <div class="flex items-center">
+                            <i class="fas fa-star text-yellow-300"></i>
+                            <span class="text-gray-500">{{ prod.ratingsAverage }}</span>
+                        </div>
+                    </div>
+                </div>
+
+
+               </div>
+
+
+               
+             <button *ngIf="!isProductInWishlist(prod.id)" (click)="addToWishList(prod.id)" class="py-2 rounded mx-auto">
+                <i class="fa-regular fa-heart"></i> 
+              </button>
+          
+              <button *ngIf="isProductInWishlist(prod.id)" (click)="removeFromWishlist(prod.id)" class="py-2 rounded mx-auto">
+                <i class="fa-solid fa-heart text-red-600"></i> Remove from Wishlist
+              </button>
+
+              
+
+                <button (click)="addToCart(prod.id)" class="bg-green-900 text-white py-2 px-10 border rounded w-[90%] mx-auto block">Add To Cart</button>
+         </div>
+        }
+
+      
+    </div>
+</section>

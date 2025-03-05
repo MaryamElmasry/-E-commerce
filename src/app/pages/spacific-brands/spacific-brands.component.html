@@ -1,0 +1,20 @@
+<section *ngIf="brandDetails">
+    <h2 class="text-4xl py-2 text-center">Brand Details</h2>
+    <div class="card">
+      <div class="card-body">
+        <h4 class="text-center text-2xl">{{ brandDetails.name }}</h4>
+        <p>Slug: {{ brandDetails.slug }}</p>
+        <p>Created At: {{ brandDetails.createdAt | date }}</p>
+        <p>Updated At: {{ brandDetails.updatedAt | date }}</p>
+      </div>
+      <div class="card-img">
+        <img [src]="brandDetails.image" alt="{{ brandDetails.name }}" class="w-full h-[250px] object-contain">
+      </div>
+    </div>
+  </section>
+  
+  <!-- Show loading message or a placeholder if brand details are not yet loaded -->
+  <section *ngIf="!brandDetails">
+    <p>Loading brand details...</p>
+  </section>
+  

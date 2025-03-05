@@ -1,0 +1,46 @@
+{
+    "navbar": {
+      "home": "home",
+      "products": "products",
+      "categories": "categories",
+      "brands": "brands",
+      "login": "LogIn",
+      "register": "register",
+      "logout": "LogOut",
+      "lang": "Lang",
+      "wishList": "wishList"
+    
+    },
+    "footer": {
+      "GetTheFreshCartApp": "Get The FreshCart App",
+      "WeWillSendYouaLink,OpenitonYourPhonetodownloadtheapp": "We Will Send You a Link, Open it on Your Phone to download the app",
+      "Paymentpartners": "Payment partners",
+      "email": "email",
+      "GetDeliverieswithFreshCart": "Get Deliveries with FreshCart",
+      "shareAppLink": "share App Link"
+      
+    },
+    "home":{
+        "popularCategories": "popular Categories",
+        "Popularproducts": "Popular products",
+        "search": "search"
+    },
+    "login": {
+      "loginNow": "login Now",
+      "email": "email",
+      "password": "password",
+      "signin": "SignIn",
+      "forgetpassword": "forget password",
+      "Passwordisrequired":"Password is required",
+      "ForgetPassword":"Forget Password",
+      "Passwordmuststartwithanuppercaseletterandbeatleast8characterslong":"Password must start with an uppercase letter and be at least 8 characters long"
+    },
+    "cart": {
+      "TotalCartPrice": "Total Cart Price",
+      "Shop Cart": "Shop Cart",
+      "Checkout": "CheckOut",
+      "nodatafound": "no data found",
+      "Clearcart": "Clear cart"
+    }
+  }
+  
