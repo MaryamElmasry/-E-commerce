@@ -1,0 +1,8 @@
+{
+    "routes": [
+      { "src": "/checkout/:id", "dest": "/index.html", "prerender": false },
+      { "src": "/brands/:id", "dest": "/index.html", "prerender": false },
+      { "src": "/categoryDetails/:id", "dest": "/index.html", "prerender": false }
+    ]
+  }
+  
