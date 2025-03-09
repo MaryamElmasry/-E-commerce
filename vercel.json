@@ -1,8 +1,16 @@
 {
-    "routes": [
-      { "src": "/checkout/:id", "dest": "/index.html", "prerender": false },
-      { "src": "/brands/:id", "dest": "/index.html", "prerender": false },
-      { "src": "/categoryDetails/:id", "dest": "/index.html", "prerender": false }
-    ]
+  "version": 2,
+  "public": true,
+  "name": "ecommerce",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/api"
+    }
+  ],
+  "functions": {
+    "api/index.js": {
+      "includeFiles": "dist/ecommerce/**"
+    }
   }
-  
+}
