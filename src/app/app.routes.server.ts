@@ -19,12 +19,12 @@ export const serverRoutes: ServerRoute[] = [
   },
 
 
-  // {
-  //   path: '**', //news website
-  //   renderMode: RenderMode.Server
-  // },
   {
-    path: '**',
-    renderMode: RenderMode.Prerender,
-  }
+    path: '**', //news website
+    renderMode: RenderMode.Server
+  },
+  // {
+  //   path: '**',
+  //   renderMode: RenderMode.Prerender,
+  // }
 ];
